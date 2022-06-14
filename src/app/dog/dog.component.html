@@ -1,0 +1,10 @@
+<div class="container">
+    <button (click)="getDog()">CLIQUE PARA GERAR O DOGUINHO</button>
+    <div class="cachorrobg" *ngIf="this.dog">
+        <figure class="imgContainer">
+            <img id="imageDog" [src]="this.dog.url">
+        </figure>
+        <figcaption>VOI LA!</figcaption>
+        <p>{{(this.dog.fileSizeBytes / 1024).toFixed(2)}}kBs</p>
+    </div>
+</div>
